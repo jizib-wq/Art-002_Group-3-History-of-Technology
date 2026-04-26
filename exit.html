@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exit</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("image10.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+/* Dark overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+/* Center content */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* Button */
+.return-btn {
+    padding: 14px 24px;
+
+    background: #2196F3;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.return-btn:hover {
+    background: #1976D2;
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>👋 Thank You for Visiting</h1>
+
+    <p>
+        We hope you enjoyed your journey through the Museum of Technological Evolution.<br>
+        You are always welcome to return and explore again.
+        
+    </p>
+
+    <a href="index.html">
+        <button class="return-btn">🏛 Return to Entrance</button>
+    </a>
+
+</div>
+
+</body>
+</html>

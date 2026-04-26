@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("image10.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+
+.main {
+    display: flex;
+    gap: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+
+.era-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 300px;
+}
+
+
+.era-btn {
+    padding: 14px 18px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+
+    transition: 0.3s;
+}
+
+.era-btn:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.25);
+}
+
+
+.guide {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+
+.guide img {
+    width: 240px;   
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+}
+
+
+.guide img:hover {
+    transform: scale(1.05);
+}
+
+
+.speech-bubble {
+    max-width: 260px;
+
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    transform: translateY(-18px);
+}
+
+
+.home-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: black;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+    z-index: 3;
+}
+
+.home-btn:hover {
+    transform: scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    
+    <div class="guide">
+        <img src="Guide.png" alt="Museum Guide">
+
+        <div class="speech-bubble">
+            Good day, and welcome to the Museum of Technological Evolution.
+
+My name is Alfred, and I will be your guide throughout this journey through time. Together, we will explore how human innovation has shaped the world—from the earliest tools crafted by ancient civilizations to the advanced technologies that define modern life.
+
+Each era you visit tells a story of creativity, discovery, and progress. I encourage you to take your time, observe closely, and enjoy the experience as we walk through the milestones of human achievement.
+
+Whenever you are ready, choose an era on the right to begin your exploration.
+        </div>
+    </div>
+
+    
+    <div class="era-container">
+        <a href="Prehistoric.html" class="era-btn">Prehistoric & Ancient Technology</a>
+        <a href="middleAges.html" class="era-btn">The Middle Ages & Renaissance</a>
+        <a href="Industrial.html" class="era-btn">The Industrial Revolution</a>
+        <a href="Digital.html" class="era-btn">The Digital Age</a>
+        <a href="ModernTech.html" class="era-btn">Modern Technology</a>
+        <a href="quiz.html" class="era-btn">Alfred's Mini Game(Play after exploring)</a>
+    </div>
+
+</div>
+
+<a href="index.html" class="home-btn">Home</a>
+
+</body>
+</html>

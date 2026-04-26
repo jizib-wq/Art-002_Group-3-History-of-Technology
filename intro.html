@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    
+    background: radial-gradient(circle at center,
+        #2a2a2a 0%,
+        #141414 60%,
+        #000000 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 650px;
+    height: 650px;
+
+    background: radial-gradient(circle,
+        rgba(255,255,255,0.15),
+        transparent 70%
+    );
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 0;
+}
+
+
+.bubble {
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+    color: white;
+    text-align: center;
+
+    z-index: 2;
+}
+
+
+.bubble:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+.decor {
+    position: fixed;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.decor:hover {
+    transform: scale(1.15);
+}
+
+
+.img1 { top: 12%; left: 10%; transform: rotate(-8deg); }
+.img2 { top: 25%; right: 12%; transform: rotate(6deg); }
+.img3 { bottom: 18%; left: 18%; transform: rotate(10deg); }
+.img4 { bottom: 25%; right: 15%; transform: rotate(-5deg); }
+
+.img5 { top: 5%; left: 30%; transform: rotate(-6deg); }
+.img6 { top: 8%; left: 50%; transform: rotate(4deg); }
+.img7 { top: 5%; right: 25%; transform: rotate(-3deg); }
+
+.img8 { bottom: 8%; left: 35%; transform: rotate(5deg); }
+.img9 { bottom: 10%; right: 30%; transform: rotate(-7deg); }
+
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+
+.lightbox img {
+    width: 60%;
+    max-width: 600px;
+    border-radius: 20px;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+
+.btn-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.3);
+}
+</style>
+</head>
+
+<body>
+
+
+<a href="#img1"><img src="img1.jpg" class="decor img1"></a>
+<a href="#img2"><img src="img2.jpg" class="decor img2"></a>
+<a href="#img3"><img src="img3.jpg" class="decor img3"></a>
+<a href="#img4"><img src="img4.jpg" class="decor img4"></a>
+<a href="#img5"><img src="img5.jpg" class="decor img5"></a>
+<a href="#img6"><img src="img6.jpg" class="decor img6"></a>
+<a href="#img7"><img src="img7.jpg" class="decor img7"></a>
+<a href="#img8"><img src="img8.jpg" class="decor img8"></a>
+<a href="#img9"><img src="img9.jpg" class="decor img9"></a>
+
+
+<div id="img1" class="lightbox"><a href="#"><img src="img1.jpg"></a></div>
+<div id="img2" class="lightbox"><a href="#"><img src="img2.jpg"></a></div>
+<div id="img3" class="lightbox"><a href="#"><img src="img3.jpg"></a></div>
+<div id="img4" class="lightbox"><a href="#"><img src="img4.jpg"></a></div>
+<div id="img5" class="lightbox"><a href="#"><img src="img5.jpg"></a></div>
+<div id="img6" class="lightbox"><a href="#"><img src="img6.jpg"></a></div>
+<div id="img7" class="lightbox"><a href="#"><img src="img7.jpg"></a></div>
+<div id="img8" class="lightbox"><a href="#"><img src="img8.jpg"></a></div>
+<div id="img9" class="lightbox"><a href="#"><img src="img9.jpg"></a></div>
+
+
+<div class="bubble">
+    <h1>Introduction</h1>
+    <p>
+        Technology has shaped human civilization for thousands of years. This exhibit traces the journey of innovation—from the simple tools used by early humans to the complex digital systems of today. We explore how inventions changed how we live, work, and communicate, showing that technology is not just about machines, but about human creativity and progress.
+    </p>
+</div>
+
+
+<div class="btn-container">
+    <a href="index.html" class="btn">Home</a>
+    <a href="gallery.html" class="btn">Gallery</a>
+</div>
+
+</body>
+</html>

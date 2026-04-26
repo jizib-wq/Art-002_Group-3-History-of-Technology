@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum Exhibit</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("spol.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.text-box {
+    flex: 2;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    height: 420px;
+    overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 6px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+.images {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-box {
+    height: 200px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 80%;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+    background: rgba(247, 150, 150, 0.804);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="title">
+        THE MIDDLE AGES & RENAISSANCE (500-1750)
+    </div>
+
+    <div class="container">
+
+        <div class="text-box">
+
+<b>Balangay Boat (Advanced Maritime Technology)</b>
+
+<br><br><br>
+
+Inventor/Creator:
+<br>
+The Balangay was built by skilled early Filipino seafarers from Austronesian communities, especially those living in coastal settlements such as Butuan.
+
+<br><br><br>
+
+When was it made:
+<br>
+The balangay dates back as early as 320 CE, but its use continued and developed through the Middle Ages and early colonial period up to around the 1500s.
+
+<br><br><br>
+
+Location:
+<br>
+It was widely used in coastal and riverine areas of the Philippines, with major archaeological discoveries found in Butuan, Mindanao.
+
+<br><br><br>
+
+Purpose:
+<br>
+The balangay was designed for long-distance sea travel, trade, and migration between islands.
+
+<br><br><br>
+
+What was the use of it:
+<br>
+It was used to transport people, goods, and cultural practices, helping early Filipinos build strong maritime trade networks.
+
+<br><br><br>
+
+How to use it:
+<br>
+To use the balangay, trained rowers and navigators would coordinate paddling while a leader guided direction using knowledge of stars, winds, and currents.
+
+<br><br><br>
+
+How it works:
+<br>
+The balangay works through buoyancy and human or wind-powered movement, using wooden planks joined without nails for flexibility.
+
+<br><br><br>
+
+Significance:
+<br>
+The balangay is a symbol of early Filipino innovation and seafaring skill, and the origin of the word “barangay.”
+
+<br><br><br>
+
+
+Source:
+<br>
+Balangay boat as symbol of ancient Filipino ingenuity - Institute for Maritime and Ocean Affairs https://share.google/jvQWS452Q4QU2zckT
+
+        </div>
+
+        <div class="images">
+
+            <div class="image-box" onclick="openLightbox('balangay1.jpg','A reconstructed Balangay boat showing the traditional wooden plank-built structure used for ancient Filipino sea travel ')">
+                <img src="balangay1.jpg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('balangay2.jpg','Early Filipino seafarers and boat builders, representing the Austronesian ancestors who crafted the Balangay ')">
+                <img src="balangay2.jpg">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <div class="caption" id="caption"></div>
+</div>
+
+
+<div class="nav-buttons">
+    <a href="gallery.html" class="nav-btn">Gallery</a>
+    <a href="middleAges2.html" class="nav-btn">Next</a>
+</div>
+
+<script>
+function openLightbox(src, text){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("caption").innerText = text;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

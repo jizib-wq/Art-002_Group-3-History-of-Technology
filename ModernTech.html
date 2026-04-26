@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum Exhibit</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("digitalbg.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.text-box {
+    flex: 2;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    height: 420px;
+    overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 6px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+.images {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-box {
+    height: 200px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 80%;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+    background: rgba(247, 150, 150, 0.804);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="title">
+        MODERN TECHNOLOGY (2010s-PRESENT)
+    </div>
+
+    <div class="container">
+
+        <div class="text-box">
+
+<b>SALt Lamp (Saltwater LED Lighting Technology)</b>
+
+<br><br><br>
+
+Inventor/Creator:
+<br>
+Aisa Mijeno co-invented the SALt (Sustainable Alternative Lighting) Lamp, a portable lighting device powered by saltwater instead of electricity.
+
+<br><br><br>
+
+When was it made:
+<br>
+The SALt Lamp was developed in the early 2010s and gained international attention around 2014 during innovation competitions.
+
+<br><br><br>
+
+Location:
+<br>
+Butbut Tribe, Tinglayan, Kalinga, Cordillera Administrative Region, Philippines. Aisa Mijeno was inspired to create the SALt Lamp after living with the Butbut Tribe, where there was no electricity and people relied on kerosene lamps.
+
+<br><br><br>
+
+Purpose:
+<br>
+The purpose of the SALt Lamp was to provide a safe, sustainable, and affordable lighting source for communities without stable electricity.
+
+<br><br><br>
+
+What was the use of it:
+<br>
+It was used as an alternative light source in homes, especially in coastal and remote areas, using a saltwater solution to generate low-voltage electricity.
+
+<br><br><br>
+
+How to use it:
+<br>
+The lamp is filled with saltwater or seawater, and its metal electrodes are placed into the solution. Once activated, a chemical reaction begins and the LED light turns on, providing illumination for several hours.
+
+<br><br><br>
+
+How it works:
+<br>
+It works through an electrochemical reaction between saltwater and metal electrodes. This reaction generates a small amount of electricity that powers an LED bulb, making it safe, renewable, and fuel-free.
+
+<br><br><br>
+
+Significance:
+<br>
+The SALt Lamp promotes sustainable and eco-friendly energy use, especially in off-grid communities. It highlights Filipino innovation in renewable energy and shows how science can help solve energy poverty.
+
+<br><br><br>
+
+
+Source:
+<br>
+https://www.philstar.com/news-commentary/2016/06/25/1596567/illuminating-communities-salt-lamp
+
+        </div>
+
+        <div class="images">
+
+            <div class="image-box" onclick="openLightbox('salt.jpeg','Aisa Mijeno, Filipino engineer and co-inventor of the SALt Lamp sustainable lighting system')">
+                <img src="salt.jpeg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('salt2.jpg','A SALt lamp prototype powered by saltwater, designed for sustainable lighting in off-grid communities')">
+                <img src="salt2.jpg">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <div class="caption" id="caption"></div>
+</div>
+
+
+<div class="nav-buttons">
+    <a href="gallery.html" class="nav-btn">Gallery</a>
+    <a href="Modern2.html" class="nav-btn">Next</a>
+</div>
+
+<script>
+function openLightbox(src, text){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("caption").innerText = text;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

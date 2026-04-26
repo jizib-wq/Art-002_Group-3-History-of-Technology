@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exit - Alfred</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    background: url("image10.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alfred-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.alfred-box img {
+    width: 220px;
+    border-radius: 15px;
+}
+
+
+.bubble {
+    max-width: 480px;
+    height: 430px;
+
+    padding: 18px;
+
+    background: rgba(255,255,255,0.14);
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+    line-height: 1.6;
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.4) rgba(255,255,255,0.1);
+}
+
+
+.bubble::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bubble::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+}
+
+.bubble::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.35);
+    border-radius: 10px;
+}
+
+.bubble::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+.exit-btn {
+    margin-top: 15px;
+    padding: 12px 20px;
+
+    background: #ff5e57;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.exit-btn:hover {
+    background: #e04842;
+    transform: scale(1.05);
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.names {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.names p {
+    margin: 6px 0;
+    opacity: 0.95;
+}
+
+hr {
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 15px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="alfred-box">
+
+        <img src="Guide.png" alt="Alfred">
+
+        <div class="bubble">
+
+            <h2>The Museum Staff Bids You Farewell</h2>
+
+            <p>
+                Congratulations, traveler. You have now completed your journey through the Museum of Technological Evolution.
+                From ancient innovations to modern breakthroughs, you have witnessed how human creativity shaped history.
+            </p>
+
+            <p>
+                I, Alfred, hope this experience has sparked your curiosity and appreciation for the endless progress of technology.
+                Every invention you saw began with a simple idea — just like curiosity inside you today.
+            </p>
+
+            <p>
+                As you leave these halls, remember: learning does not end here. It continues wherever curiosity takes you.
+            </p>
+
+            <hr>
+
+            <h3>MUSEUM STAFF</h3>
+
+            <div class="names">
+
+                <p>Abrejal, Krissha Rose B. - Website Creator</p>
+                <p>Acosta, Hellary - Industrial Revolution research</p>
+                <p>Añasco, Hershey D. - Prehistoric & Ancient Technology research</p>
+                <p>Boquiren, Caroline I. - Middle Ages & Renaissance information</p>
+                <p>Castañares, Rish U. - Middle Ages & Renaissance research</p>
+                <p>De Guzman, Aiyessa Fei F. - Modern Technology research</p>
+                <p>Estuesta, Riza Mae M. - Digital Age information</p>
+                <p>Manaois, Princes Bea A. - Industrial Revolution research</p>
+                <p>Orenza, Wynne Regina H. - Prehistoric & Ancient Technology information</p>
+                <p>Presto, Kiell John D. - Modern Technology information</p>
+                <p>Ramirez, John Michael A. - Middle Ages & Renaissance research</p>
+                <p>Roca, Francis Enrico D. - Industrial Revolution information</p>
+                <p>Velasco, Crizel Jean T. - Digital Age research</p>
+
+            </div>
+
+            <br>
+
+            <p>
+                And now… it is time for you to return to your world beyond the museum.
+                Thank you for visiting. I hope to guide you again someday.
+            </p>
+
+            <p><b>Goodbye, traveler… and farewell.</b></p>
+
+            <a href="exit.html">
+                <button class="exit-btn">🚪 Exit Museum</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

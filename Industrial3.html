@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum Exhibit</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("dustrial.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.text-box {
+    flex: 2;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    height: 420px;
+    overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 6px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+.images {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-box {
+    height: 200px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 80%;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+    background: rgba(247, 150, 150, 0.804);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="title">
+        THE INDUSTRIAL REVOLUTION (1750-1950)
+    </div>
+
+    <div class="container">
+
+        <div class="text-box">
+
+<b>Tranvía Electric Tram System (Urban Transport Technology)</b>
+
+<br><br><br>
+
+Inventor/Creator:
+<br>
+The electric tranvía (tram) system in Manila was introduced through the Manila Electric Railroad and Light Company (Meralco), spearheaded by American businessman Charles M. Swift, who won the franchise in 1903.
+
+<br><br><br>
+
+When was it made:
+<br>
+The tram system began operating in the late 19th century (around the 1880s–1890s) and expanded during the American colonial period up to the 1940s.
+
+<br><br><br>
+
+Location:
+<br>
+It operated in Manila and nearby urban areas such as Intramuros, Malate, and Binondo.
+
+<br><br><br>
+
+Purpose:
+<br>
+The tranvía was designed to provide fast and organized public transportation within the growing city of Manila.
+
+<br><br><br>
+
+What was the use of it:
+<br>
+It was used to carry passengers across urban districts, helping people travel to work, school, and commercial centers efficiently.
+
+<br><br><br>
+
+How to use it:
+<br>
+Passengers would wait at designated tram stops along city streets and board the electric streetcar when it arrived. They would pay a fare and take available seats while traveling along fixed routes.
+
+<br><br><br>
+
+How it works:
+<br>
+The tranvía worked using electric-powered streetcars that ran on metal rails installed on city roads. Electricity from overhead wires powered the motor, allowing smooth movement along fixed tracks while stopping to pick up and drop off passengers.
+
+<br><br><br>
+
+Significance:
+<br>
+The tranvía was one of the earliest forms of mass urban transportation in the Philippines. It modernized travel in Manila, reduced travel time, and supported the city’s economic and social growth. It also marked the beginning of electric-powered public transport in the country.
+
+<br><br><br>
+
+
+Source:
+<br>
+Tranvía - Wikipedia https://share.google/0IYRcRV1LufH0IJ1n
+
+        </div>
+
+        <div class="images">
+
+            <div class="image-box" onclick="openLightbox('tranvia1.jpeg','A Manila tranvia streetcar running through city streets during the early 1900s')">
+                <img src="tranvia1.jpeg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('tranvia2.jpeg','American businessman who developed Manilas early electric tram system')">
+                <img src="tranvia2.jpeg">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <div class="caption" id="caption"></div>
+</div>
+
+
+<div class="nav-buttons">
+    <a href="Industrial2.html" class="nav-btn">Back</a>
+    <a href="Industrial4.html" class="nav-btn">Next</a>
+</div>
+
+<script>
+function openLightbox(src, text){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("caption").innerText = text;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

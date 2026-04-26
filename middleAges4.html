@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum Exhibit</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("spol.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.text-box {
+    flex: 2;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    height: 420px;
+    overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 6px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+.images {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-box {
+    height: 200px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 80%;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+    background: rgba(247, 150, 150, 0.804);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="title">
+        THE MIDDLE AGES & RENAISSANCE (500-1750)
+    </div>
+
+    <div class="container">
+
+        <div class="text-box">
+
+<b>Earthenware Pottery and Storage Jars (Daily Life Technology)</b>
+
+<br><br><br>
+
+Inventor/Creator:
+<br>
+Early Filipino potters created Earthenware Pottery using clay, water, and fire techniques passed through generations.
+
+<br><br><br>
+
+When was it made:
+<br>
+Pottery production continued to develop from around 1000 BCE and remained widely used throughout the Middle Ages up to the Spanish period (1500s–1700s).
+
+<br><br><br>
+
+Location:
+<br>
+Pottery artifacts have been found in Palawan, Batangas, and other parts of the Philippine archipelago.
+
+<br><br><br>
+
+Purpose:
+<br>
+Pottery was made to store food, cook meals, and preserve water in daily household life.
+
+<br><br><br>
+
+What was the use of it:
+<br>
+It was used for cooking rice and fish, storing grains, and sometimes as burial jars for honoring the dead.
+
+<br><br><br>
+
+How to use it:
+<br>
+To use earthenware pottery, people would place food or water inside the pot depending on its purpose. Cooking pots were placed over fire to prepare meals, while storage jars were kept in homes to hold rice, grains, or liquids. Burial jars were carefully used in rituals to hold the remains of the deceased.
+
+<br><br><br>
+
+How it works:
+<br>
+Earthenware pottery works through its heat-resistant and porous properties. When clay is shaped and fired at high temperatures, it becomes hard and durable. Cooking pots evenly distribute heat, making food easier to cook, while storage jars help keep contents cool and protected from outside elements.
+
+<br><br><br>
+
+Significance:
+<br>
+Earthenware pottery reflects the creativity and daily life of early Filipinos. It shows their ability to transform natural materials into useful objects for survival and culture. These jars also hold cultural and spiritual value, especially in burial practices, revealing early beliefs about life, death, and the afterlife.
+
+<br><br><br>
+
+Source:
+<br>
+Pottery as a Technology | by Erik Engheim | Counter Arts | Medium https://share.google/Fwm0P5tYH4rwKKqaD
+
+        </div>
+
+        <div class="images">
+
+            <div class="image-box" onclick="openLightbox('Pottery1.jpeg','Early Filipino potters shaping clay pots by hand using traditional firing methods')">
+                <img src="Pottery1.jpeg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('Pottery2.jpeg','Ancient Filipino earthenware jars used for cooking, storage, and burial practices')">
+                <img src="Pottery2.jpeg">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <div class="caption" id="caption"></div>
+</div>
+
+
+<div class="nav-buttons">
+    <a href="middleAges3.html" class="nav-btn">Back</a>
+    <a href="gallery.html" class="nav-btn">Back to Gallery</a>
+</div>
+
+<script>
+function openLightbox(src, text){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("caption").innerText = text;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

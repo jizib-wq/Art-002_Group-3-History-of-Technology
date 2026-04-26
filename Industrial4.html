@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Museum Exhibit</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: url("dustrial.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    color: white;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+
+    padding: 12px 22px;
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+
+    width: 90%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.text-box {
+    flex: 2;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 18px;
+
+    padding: 18px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    height: 420px;
+    overflow-y: auto;
+}
+
+.text-box::-webkit-scrollbar {
+    width: 6px;
+}
+.text-box::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.25);
+    border-radius: 10px;
+}
+
+.images {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-box {
+    height: 200px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+
+    cursor: pointer;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.92);
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 15px;
+    opacity: 0.9;
+    text-align: center;
+    max-width: 80%;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.08);
+    background: rgba(247, 150, 150, 0.804);
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="title">
+        THE INDUSTRIAL REVOLUTION (1750-1950)
+    </div>
+
+    <div class="container">
+
+        <div class="text-box">
+
+<b>Telephone System in the Philippines (Communication Technology)</b>
+
+<br><br><br>
+
+Inventor/Creator:
+<br>
+The early telephone system in the Philippines was introduced by American telecommunications companies and supported by Filipino engineers and technicians.
+
+<br><br><br>
+
+When was it made:
+<br>
+The telephone system was introduced in the early 1900s, shortly after the start of American colonial rule.
+
+<br><br><br>
+
+Location:
+<br>
+It was first installed in Manila and later expanded to major cities such as Cebu and Iloilo.
+
+<br><br><br>
+
+Purpose:
+<br>
+The purpose of the telephone system was to allow instant voice communication over long distances.
+
+<br><br><br>
+
+What was the use of it:
+<br>
+It was used for government communication, business transactions, and personal contact between cities and provinces.
+
+<br><br><br>
+
+How to use it:
+<br>
+To use the telephone system, a user would pick up the telephone receiver and wait for a dial tone. They would then dial a number to connect to another telephone line and speak through the handset.
+
+<br><br><br>
+
+How it works:
+<br>
+The telephone system works by converting voice sounds into electrical signals. These signals travel through wires to another telephone, where they are converted back into sound. Early systems used manual switchboards operated by telephone operators to connect calls.
+
+<br><br><br>
+
+Significance:
+<br>
+The telephone system greatly improved communication in the Philippines by making long-distance contact faster and more reliable. It helped government offices, businesses, and individuals communicate efficiently, marking an important step in modern communication technology.
+
+<br><br><br>
+
+
+Source:
+<br>
+https://en.wikipedia.org/wiki/Telephone_in_the_Philippines
+
+        </div>
+
+        <div class="images">
+
+            <div class="image-box" onclick="openLightbox('telephone1.jpg','Early rotary telephone used in the Philippines sueing the early 20th century')">
+                <img src="telephone1.jpg">
+            </div>
+
+            <div class="image-box" onclick="openLightbox('telephone2.jpeg','American communication engineers and Filipino operators who managed early telephone lines')">
+                <img src="telephone2.jpeg">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+    <div class="caption" id="caption"></div>
+</div>
+
+
+<div class="nav-buttons">
+    <a href="Industrial3.html" class="nav-btn">Back</a>
+    <a href="gallery.html" class="nav-btn">Back to Gallery</a>
+</div>
+
+<script>
+function openLightbox(src, text){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("caption").innerText = text;
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>

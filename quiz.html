@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alfred’s Museum Quiz</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("image10.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.alfred-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.alfred-box img {
+    width: 180px;
+    border-radius: 15px;
+}
+
+.bubble {
+    max-width: 400px;
+    padding: 15px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    font-size: 14px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.nav-buttons button {
+    background: #2196F3;
+}
+
+.nav-buttons button:hover {
+    background: #1976D2;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🧠 Alfred’s Museum Quiz</h1>
+
+<div class="alfred-box">
+    <img src="Guide.png">
+
+    <div class="bubble" id="alfredText">
+        Welcome, dear visitor.<br><br>
+        Before you leave the museum, answer these 15 questions.<br><br>
+        Let’s see what you’ve learned!
+    </div>
+</div>
+
+<form id="quizForm">
+
+
+<div class="question">
+<p>1. What is the Angono Petroglyphs known for?</p>
+<input type="radio" name="q1" value="0"> Modern paintings<br>
+<input type="radio" name="q1" value="1"> Ancient rock carvings<br>
+<input type="radio" name="q1" value="0"> Metal tools<br>
+<input type="radio" name="q1" value="0"> Pottery making<br>
+</div>
+
+
+<div class="question">
+<p>2. Who used the Callao Man tools?</p>
+<input type="radio" name="q2" value="1"> Early humans in the Philippines<br>
+<input type="radio" name="q2" value="0"> Spanish colonizers<br>
+<input type="radio" name="q2" value="0"> Americans<br>
+<input type="radio" name="q2" value="0"> Farmers<br>
+</div>
+
+
+<div class="question">
+<p>3. Shell tools were mainly made from?</p>
+<input type="radio" name="q3" value="1"> Sea shells<br>
+<input type="radio" name="q3" value="0"> Metal<br>
+<input type="radio" name="q3" value="0"> Plastic<br>
+<input type="radio" name="q3" value="0"> Wood<br>
+</div>
+
+
+<div class="question">
+<p>4. The Balangay was used for?</p>
+<input type="radio" name="q4" value="1"> Sea travel and trade<br>
+<input type="radio" name="q4" value="0"> Farming<br>
+<input type="radio" name="q4" value="0"> Mining<br>
+<input type="radio" name="q4" value="0"> Cooking<br>
+</div>
+
+
+<div class="question">
+<p>5. Traditional weaving uses what tool?</p>
+<input type="radio" name="q5" value="1"> Backstrap loom<br>
+<input type="radio" name="q5" value="0"> Sewing machine<br>
+<input type="radio" name="q5" value="0"> Hammer<br>
+<input type="radio" name="q5" value="0"> Stove<br>
+</div>
+
+
+<div class="question">
+<p>6. Kampilan is a type of?</p>
+<input type="radio" name="q6" value="1"> Sword<br>
+<input type="radio" name="q6" value="0"> Boat<br>
+<input type="radio" name="q6" value="0"> Pot<br>
+<input type="radio" name="q6" value="0"> Phone<br>
+</div>
+
+
+<div class="question">
+<p>7. Earthenware pots were used for?</p>
+<input type="radio" name="q7" value="1"> Cooking and storage<br>
+<input type="radio" name="q7" value="0"> Flying<br>
+<input type="radio" name="q7" value="0"> Writing<br>
+<input type="radio" name="q7" value="0"> Fighting<br>
+</div>
+
+<div class="question">
+<p>8. Sulpakan produces fire using?</p>
+<input type="radio" name="q8" value="1"> Air compression<br>
+<input type="radio" name="q8" value="0"> Electricity<br>
+<input type="radio" name="q8" value="0"> Gasoline<br>
+<input type="radio" name="q8" value="0"> Solar energy<br>
+</div>
+
+
+<div class="question">
+<p>9. Manila–Dagupan Railway used?</p>
+<input type="radio" name="q9" value="1"> Steam engines<br>
+<input type="radio" name="q9" value="0"> Cars<br>
+<input type="radio" name="q9" value="0"> Bikes<br>
+<input type="radio" name="q9" value="0"> Planes<br>
+</div>
+
+
+<div class="question">
+<p>10. Tranvia was powered by?</p>
+<input type="radio" name="q10" value="1"> Electricity<br>
+<input type="radio" name="q10" value="0"> Steam only<br>
+<input type="radio" name="q10" value="0"> Gasoline<br>
+<input type="radio" name="q10" value="0"> Firewood<br>
+</div>
+
+
+<div class="question">
+<p>11. Telephone converts voice into?</p>
+<input type="radio" name="q11" value="1"> Electrical signals<br>
+<input type="radio" name="q11" value="0"> Smoke<br>
+<input type="radio" name="q11" value="0"> Water<br>
+<input type="radio" name="q11" value="0"> Light only<br>
+</div>
+
+
+<div class="question">
+<p>12. Videophone allows?</p>
+<input type="radio" name="q12" value="1"> Seeing and talking<br>
+<input type="radio" name="q12" value="0"> Only texting<br>
+<input type="radio" name="q12" value="0"> Only calling<br>
+<input type="radio" name="q12" value="0"> Only music<br>
+</div>
+
+
+<div class="question">
+<p>13. Erythromycin is used for?</p>
+<input type="radio" name="q13" value="1"> Treating infections<br>
+<input type="radio" name="q13" value="0"> Building houses<br>
+<input type="radio" name="q13" value="0"> Transportation<br>
+<input type="radio" name="q13" value="0"> Cooking<br>
+</div>
+
+
+<div class="question">
+<p>14. SALt Lamp uses?</p>
+<input type="radio" name="q14" value="1"> Saltwater<br>
+<input type="radio" name="q14" value="0"> Oil<br>
+<input type="radio" name="q14" value="0"> Firewood<br>
+<input type="radio" name="q14" value="0"> Gas<br>
+</div>
+
+
+<div class="question">
+<p>15. Beep card is used for?</p>
+<input type="radio" name="q15" value="1"> Cashless transport payment<br>
+<input type="radio" name="q15" value="0"> Cooking<br>
+<input type="radio" name="q15" value="0"> Writing<br>
+<input type="radio" name="q15" value="0"> Farming<br>
+</div>
+
+<button type="button" onclick="calculateScore()">Submit Quiz</button>
+
+</form>
+
+<div id="result"></div>
+
+
+<div class="nav-buttons" id="walkBtn">
+    <a href="end.html"><button type="button">🚶 Walk Out</button></a>
+</div>
+
+<script>
+function calculateScore() {
+    let score = 0;
+
+    for (let i = 1; i <= 15; i++) {
+        let answers = document.getElementsByName("q" + i);
+        for (let j = 0; j < answers.length; j++) {
+            if (answers[j].checked && answers[j].value === "1") {
+                score++;
+            }
+        }
+    }
+
+    let text = "";
+
+    if (score >= 13) {
+        text = "🔥 Excellent! You are a museum expert!";
+    } else if (score >= 9) {
+        text = "👍 Good job! You know your history well!";
+    } else if (score >= 5) {
+        text = "🙂 Not bad, but you can improve!";
+    } else {
+        text = "📚 Keep studying! Alfred believes in you!";
+    }
+
+    document.getElementById("result").innerHTML =
+        "🎯 Score: " + score + " / 15<br><br>" + text;
+
+    document.getElementById("alfredText").innerText = text;
+
+    
+    document.getElementById("walkBtn").style.display = "flex";
+}
+</script>
+
+</body>
+</html>
